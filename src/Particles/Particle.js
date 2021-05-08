@@ -19,8 +19,9 @@ export default function Particle() {
               value: ["#a71414"],
             },
             line_linked: {
-              color: "#fff",
-              opacity: 0.5,
+              color: "#a71414",
+              width: 3,
+              opacity: 0.09,
             },
             size: {
               value: 6,

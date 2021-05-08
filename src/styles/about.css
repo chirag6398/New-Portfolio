@@ -1,0 +1,37 @@
+.about__container {
+  width: 100vw;
+  min-height: 50vh;
+  display: flex;
+  position: absolute;
+  top: 70px;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  justify-content: center;
+}
+.about__mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+p {
+  font-size: 30px;
+  font-weight: 700;
+  transition: 1s all linear;
+}
+
+.about__paraContent {
+  color: white;
+}
+.about__myImg {
+  object-fit: contain;
+  height: 100px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 1s all ease-in-out;
+}
+.about__myImg:hover {
+  box-shadow: 0px 1px 11px 4px rgb(0 0 0 / 50%);
+}
