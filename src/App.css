@@ -1,4 +1,8 @@
-.portfolio__container {
+.profile__container {
   width: auto;
-  height: auto;
+  min-height: 200vh;
+}
+.profile__darkContainer {
+  transition: 1s all ease-in;
+  background-color: black !important;
 }

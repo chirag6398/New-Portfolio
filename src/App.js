@@ -1,15 +1,26 @@
-import React from "react";
+import React, { createContext, useReducer } from "react";
 import Particle from "./Particles/Particle";
 import "./App.css";
+import Nav from "./components/Nav";
+import { initialState, reducer } from "./Reducer/Reducer";
+export const ContextValue = createContext();
 
 function App() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  console.log(state.onDarkMode);
   return (
-    <div className="portfolio__container">
-      <div className="portfolio__intro">
-        <h1>Chirag</h1>
+    <ContextValue.Provider value={{ state, dispatch }}>
+      <div
+        className={
+          state.onDarkMode
+            ? "profile__darkContainer profile__container"
+            : "profile__container"
+        }
+      >
+        <Nav />
+        <Particle />
       </div>
-      <Particle />
-    </div>
+    </ContextValue.Provider>
   );
 }
 

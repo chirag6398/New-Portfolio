@@ -1,6 +1,7 @@
 import React from "react";
 import Particles from "react-particles-js";
 import "../styles/particle.css";
+
 export default function Particle() {
   return (
     <div className="particle__container">
@@ -15,14 +16,18 @@ export default function Particle() {
               },
             },
             color: {
-              value: "black",
+              value: ["#a71414"],
+            },
+            line_linked: {
+              color: "#fff",
+              opacity: 0.5,
             },
             size: {
-              value: 4,
+              value: 6,
               random: true,
               anim: {
                 enable: true,
-                speed: 2,
+                speed: 1,
               },
             },
           },
