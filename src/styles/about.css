@@ -16,15 +16,13 @@
   align-items: center;
   flex-wrap: wrap;
 }
-p {
+.about__mainContent p {
   font-size: 30px;
   font-weight: 700;
+  color: #1f1235;
   transition: 1s all linear;
 }
 
-.about__paraContent {
-  color: white;
-}
 .about__myImg {
   object-fit: contain;
   height: 100px;
@@ -34,4 +32,25 @@ p {
 }
 .about__myImg:hover {
   box-shadow: 0px 1px 11px 4px rgb(0 0 0 / 50%);
+}
+.about__btn {
+  min-width: 110px;
+  text-align: center;
+  border: none;
+  min-height: 40px;
+  border-radius: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: #ff6e6c;
+  transition: 1s all ease-out;
+}
+.about__btn:focus {
+  outline: none;
+}
+.about__btn:hover {
+  box-shadow: 0px 1px 11px 4px rgb(0 0 0 / 50%);
+}
+.about__mainContent .about__paraContent {
+  color: white;
 }

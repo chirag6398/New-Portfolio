@@ -8,7 +8,7 @@ export const ContextValue = createContext();
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state.onDarkMode);
+
   return (
     <ContextValue.Provider value={{ state, dispatch }}>
       <div

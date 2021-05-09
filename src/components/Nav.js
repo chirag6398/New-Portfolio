@@ -43,9 +43,7 @@ export default function Nav() {
           <span className={state.onDarkMode ? "nav__span1" : undefined}>
             Chirag
           </span>
-          <span className={state.onDarkMode ? "nav__span2" : undefined}>
-            Agrawal
-          </span>
+          <span className="nav__span2">Agrawal</span>
         </p>
       </div>
       <div
