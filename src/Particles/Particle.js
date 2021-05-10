@@ -9,10 +9,10 @@ export default function Particle() {
         params={{
           particles: {
             number: {
-              value: 200,
+              value: 150,
               density: {
                 enable: true,
-                value_area: 1000,
+                value_area: 1500,
               },
             },
             color: {
@@ -24,11 +24,11 @@ export default function Particle() {
               opacity: 0.09,
             },
             size: {
-              value: 6,
+              value: 10,
               random: true,
               anim: {
                 enable: true,
-                speed: 1,
+                speed: 0.5,
               },
             },
           },

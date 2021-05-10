@@ -8,15 +8,15 @@ import { MdMessage } from "react-icons/md";
 export default function About() {
   const { state } = useContext(ContextValue);
   const [animate, setAnimate] = useState(false);
-  const [width, setWidth] = useState(552);
-  const [height, setHeight] = useState(485);
+  const [width, setWidth] = useState(window.innerWidth - 130);
+  const [height, setHeight] = useState(496);
 
   let divRef = useRef(null);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       console.log(window.scrollY);
-      if (window.scrollY > 190) {
-        setHeight(window.scrollY - 190 + 485);
+      if (window.scrollY > 280) {
+        setHeight(window.scrollY - 280 + 466);
         console.log(height);
         setAnimate(true);
       } else {
@@ -42,11 +42,9 @@ export default function About() {
   });
   useEffect(() => {
     window.addEventListener("resize", () => {
-      let prev = 1366;
-      let sub = (prev - window.innerWidth) / 2;
-      setWidth(552 - sub);
-      if (window.innerWidth < 400) {
-        setWidth(115);
+      setWidth(window.innerWidth - 130);
+      if (window.innerWidth <= 500) {
+        setWidth(window.innerWidth - 90);
       }
     });
     return () => {
@@ -67,6 +65,7 @@ export default function About() {
       gsap.to(divRef, { duration: 1, x: 0, y: 0 });
     }
   }, [animate, height, width]);
+
   return (
     <div className="about__container">
       <div className="about__mainContent">
@@ -75,10 +74,20 @@ export default function About() {
         </div>
         <div>
           <p className={state.onDarkMode ? "about__paraContent" : undefined}>
-            FrontEnd Developer
+            Hi there, this is
+            <span>
+              <b> Chirag</b>
+            </span>
+            . A front-end web developer using{" "}
+            <span className="about__highlights">react-js</span> library. I work
+            with my college technical society team{" "}
+            <span className="about__highlights">Conatus</span>.I am doing my
+            Btech with Computer Science. I love to learn,explore,travel and
+            expertise in the field of web Development.
           </p>
         </div>
         <div
+          style={{ maxWidth: "max-content" }}
           ref={(el) => {
             divRef = el;
           }}

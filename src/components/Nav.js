@@ -39,12 +39,14 @@ export default function Nav() {
       }
     >
       <div className="nav__logo">
-        <p>
-          <span className={state.onDarkMode ? "nav__span1" : undefined}>
-            Chirag
-          </span>
-          <span className="nav__span2">Agrawal</span>
-        </p>
+        {show ? (
+          <p>
+            <span className={state.onDarkMode ? "nav__span1" : undefined}>
+              Chirag
+            </span>
+            <span className="nav__span2">Agrawal</span>
+          </p>
+        ) : null}
       </div>
       <div
         className={
