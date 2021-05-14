@@ -2,6 +2,7 @@ import React, { createContext, useReducer } from "react";
 import Particle from "./Particles/Particle";
 import "./App.css";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import About from "./components/About";
 import Myskills from "./components/Myskills";
 import { initialState, reducer } from "./Reducer/Reducer";
@@ -22,6 +23,7 @@ function App() {
         <Nav />
         <About />
         <Myskills />
+        <Footer />
         <Particle />
       </div>
     </ContextValue.Provider>

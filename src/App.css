@@ -1,6 +1,6 @@
 .profile__container {
   width: auto;
-  min-height: 200vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   z-index: 1;
