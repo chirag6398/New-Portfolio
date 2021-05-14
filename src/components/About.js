@@ -78,9 +78,9 @@ export default function About() {
             <span>
               <b> Chirag</b>
             </span>
-            . A front-end web developer using{" "}
+            . A front-end web developer using
             <span className="about__highlights">react-js</span> library. I work
-            with my college technical society team{" "}
+            with my college technical society team
             <span className="about__highlights">Conatus</span>.I am doing my
             Btech with Computer Science. I love to learn,explore,travel and
             expertise in the field of web Development.

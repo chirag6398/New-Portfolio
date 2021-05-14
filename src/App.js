@@ -3,6 +3,7 @@ import Particle from "./Particles/Particle";
 import "./App.css";
 import Nav from "./components/Nav";
 import About from "./components/About";
+import Myskills from "./components/Myskills";
 import { initialState, reducer } from "./Reducer/Reducer";
 export const ContextValue = createContext();
 
@@ -20,7 +21,7 @@ function App() {
       >
         <Nav />
         <About />
-
+        <Myskills />
         <Particle />
       </div>
     </ContextValue.Provider>
