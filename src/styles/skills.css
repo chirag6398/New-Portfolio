@@ -7,6 +7,9 @@
   flex-direction: column;
   z-index: 3;
 }
+.skills__section__darkMode {
+  color: #fff;
+}
 .skills__section {
   height: auto;
   display: flex;
@@ -19,8 +22,15 @@
 }
 .skills__heading {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
   width: 100vw;
+}
+.skills__checkout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 30px;
 }
 .skills__img {
   display: flex;
@@ -39,9 +49,19 @@
   margin: 20px 20px;
   /* align-items: center; */
 }
+.skills__progressBar {
+  min-width: 310px;
+  margin-right: 50px;
+  height: 30px;
+}
 @media all and (max-width: 500px) {
   .skills__container {
     margin-left: 0px;
     margin-top: 50px;
+  }
+  .skills__progressBar {
+    min-width: 160px;
+    height: 30px;
+    margin-right: 0px;
   }
 }

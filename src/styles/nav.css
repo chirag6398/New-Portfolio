@@ -10,6 +10,11 @@
   padding: 0px 30px;
   justify-content: space-between;
 }
+.nav__show__onDark {
+  transition: 0.5s all linear;
+  background-color: rgb(12, 12, 12);
+  box-shadow: -6px -9px 10px 4px rgb(0 0 0);
+}
 .nav__rightContent__darkMode {
   background-color: brown;
   height: 50px;

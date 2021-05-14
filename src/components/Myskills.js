@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/skills.css";
 import Front from "../images/Front.png";
 import Res from "../images/res.png";
 import web from "../images/webAni.png";
+import line from "../images/line.png";
 import { ProgressBar } from "react-bootstrap";
-// import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+import { ContextValue } from "../App";
 export default function Myskills() {
+  const { state } = useContext(ContextValue);
   return (
     <div className="skills__container">
-      <section className="skills__section">
+      <section
+        className={
+          state.onDarkMode
+            ? "skills__section skills__section__darkMode"
+            : "skills__section"
+        }
+      >
         <div className="skills__heading">
-          <h4>Checkout</h4>
-          <h2>What I Do</h2>
+          <img
+            alt="_____"
+            src={line}
+            style={{ width: "50px", height: "1px", marginRight: "5px" }}
+          />
+          <div className="skills__checkout">
+            <h4>Checkout</h4>
+            <h2 style={{ fontWeight: "900" }}>What I Do</h2>
+          </div>
         </div>
         <div className="skills__img">
           <div className="skills__img__1">
@@ -52,10 +68,23 @@ export default function Myskills() {
           </div>
         </div>
       </section>
-      <section className="skills__section">
+      <section
+        className={
+          state.onDarkMode
+            ? "skills__section skills__section__darkMode"
+            : "skills__section"
+        }
+      >
         <div className="skills__heading">
-          <h4>Checkout</h4>
-          <h2>What I Use</h2>
+          <img
+            alt="_____"
+            src={line}
+            style={{ width: "50px", height: "1px", marginRight: "5px" }}
+          />
+          <div className="skills__checkout">
+            <h4>Checkout</h4>
+            <h2 style={{ fontWeight: "900" }}>What I Do</h2>
+          </div>
         </div>
         <div className="skills__img">
           <div className="skills__img__1">
@@ -63,60 +92,87 @@ export default function Myskills() {
 
             <ProgressBar
               animated
-              now={60}
-              label={`${60}%`}
-              style={{ minWidth: "290px", height: "30px" }}
+              now={80}
+              label={`${80}%`}
+              className="skills__progressBar"
             />
           </div>
           <div className="skills__img__1">
-            <h4>React-js</h4>
+            <h4>Js</h4>
 
             <ProgressBar
               animated
-              now={60}
-              label={`${60}%`}
-              style={{ minWidth: "290px", height: "30px" }}
+              now={70}
+              variant="success"
+              label={`${70}%`}
+              className="skills__progressBar"
             />
           </div>
           <div className="skills__img__1">
-            <h4>React-js</h4>
+            <h4>HTML</h4>
 
             <ProgressBar
               animated
-              now={60}
-              label={`${60}%`}
-              style={{ minWidth: "290px", height: "30px" }}
+              now={80}
+              variant="info"
+              label={`${80}%`}
+              className="skills__progressBar"
             />
           </div>
           <div className="skills__img__1">
-            <h4>React-js</h4>
+            <h4>GSAP</h4>
 
             <ProgressBar
               animated
-              now={60}
-              label={`${60}%`}
-              style={{ minWidth: "290px", height: "30px" }}
+              now={30}
+              variant="danger"
+              label={`${30}%`}
+              className="skills__progressBar"
             />
           </div>
           <div className="skills__img__1">
-            <h4>React-js</h4>
+            <h4>CSS</h4>
 
             <ProgressBar
               animated
+              variant="dark"
               now={60}
               label={`${60}%`}
-              style={{ minWidth: "290px", height: "30px" }}
+              className="skills__progressBar"
             />
           </div>
 
           <div className="skills__img__1">
-            <h4>React-js</h4>
+            <h4>MongoDb</h4>
 
             <ProgressBar
               animated
+              variant="success"
+              now={40}
+              label={`${40}%`}
+              className="skills__progressBar"
+            />
+          </div>
+          <div className="skills__img__1">
+            <h4>Node-js</h4>
+
+            <ProgressBar
+              animated
+              variant="success"
+              now={35}
+              label={`${35}%`}
+              className="skills__progressBar"
+            />
+          </div>
+          <div className="skills__img__1">
+            <h4>Bootstrap</h4>
+
+            <ProgressBar
+              animated
+              variant="info"
               now={60}
               label={`${60}%`}
-              style={{ minWidth: "290px", height: "30px" }}
+              className="skills__progressBar"
             />
           </div>
         </div>

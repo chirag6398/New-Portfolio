@@ -32,7 +32,7 @@ export default function Nav() {
     <div
       className={
         show && state.onDarkMode
-          ? "nav__container"
+          ? "nav__container nav__show__onDark"
           : show && !state.onDarkMode
           ? "nav__show nav__container"
           : "nav__container"
