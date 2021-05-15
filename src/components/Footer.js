@@ -1,5 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../styles/footer.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import { ContextValue } from "../App";
 import {
@@ -12,6 +14,13 @@ import {
 
 export default function Footer() {
   const { state } = useContext(ContextValue);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div
       className={
@@ -20,7 +29,7 @@ export default function Footer() {
           : "footer__container"
       }
     >
-      <div className="footer__row">
+      <div data-aos="fade-up" className="footer__row">
         <div className="footer__thumb">
           {state.onDarkMode ? (
             <FaRegThumbsUp
@@ -35,10 +44,10 @@ export default function Footer() {
           )}
         </div>
       </div>
-      <div className="footer__row">
+      <div data-aos="fade-up" className="footer__row">
         <h5>That's all folks! Thanks for scrolling.</h5>
       </div>
-      <div className="footer__row">
+      <div data-aos="fade-up" className="footer__row">
         {state.onDarkMode ? (
           <a
             href="https://www.instagram.com/invites/contact/?i=1m2qaw2eudl1s&utm_content=284j26e"
@@ -89,6 +98,7 @@ export default function Footer() {
         )}
       </div>
       <div
+        data-aos="fade-up"
         className={
           state.onDarkMode
             ? "footer__row lastRowDarkMode "

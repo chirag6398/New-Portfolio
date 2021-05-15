@@ -1,14 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../styles/skills.css";
 import Front from "../images/Front.png";
 import Res from "../images/res.png";
 import web from "../images/webAni.png";
 import line from "../images/line.png";
 import { ProgressBar } from "react-bootstrap";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { ContextValue } from "../App";
 export default function Myskills() {
   const { state } = useContext(ContextValue);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div className="skills__container">
       <section
@@ -18,7 +26,7 @@ export default function Myskills() {
             : "skills__section"
         }
       >
-        <div className="skills__heading">
+        <div data-aos="fade-right" className="skills__heading">
           <img
             alt="_____"
             src={line}
@@ -30,7 +38,7 @@ export default function Myskills() {
           </div>
         </div>
         <div className="skills__img">
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <img
               alt="Loading..."
               src={Res}
@@ -42,7 +50,7 @@ export default function Myskills() {
               Applications.
             </p>
           </div>
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <img
               alt="Loading..."
               src={Front}
@@ -54,7 +62,7 @@ export default function Myskills() {
               and Web Applications.
             </p>
           </div>
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <img
               alt="Loading..."
               src={web}
@@ -75,7 +83,7 @@ export default function Myskills() {
             : "skills__section"
         }
       >
-        <div className="skills__heading">
+        <div data-aos="fade-right" className="skills__heading">
           <img
             alt="_____"
             src={line}
@@ -87,7 +95,7 @@ export default function Myskills() {
           </div>
         </div>
         <div className="skills__img">
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <h4>React-js</h4>
 
             <ProgressBar
@@ -97,7 +105,7 @@ export default function Myskills() {
               className="skills__progressBar"
             />
           </div>
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <h4>Js</h4>
 
             <ProgressBar
@@ -108,7 +116,7 @@ export default function Myskills() {
               className="skills__progressBar"
             />
           </div>
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <h4>HTML</h4>
 
             <ProgressBar
@@ -119,7 +127,7 @@ export default function Myskills() {
               className="skills__progressBar"
             />
           </div>
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <h4>GSAP</h4>
 
             <ProgressBar
@@ -130,7 +138,7 @@ export default function Myskills() {
               className="skills__progressBar"
             />
           </div>
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <h4>CSS</h4>
 
             <ProgressBar
@@ -142,7 +150,7 @@ export default function Myskills() {
             />
           </div>
 
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <h4>MongoDb</h4>
 
             <ProgressBar
@@ -153,7 +161,7 @@ export default function Myskills() {
               className="skills__progressBar"
             />
           </div>
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <h4>Node-js</h4>
 
             <ProgressBar
@@ -164,7 +172,7 @@ export default function Myskills() {
               className="skills__progressBar"
             />
           </div>
-          <div className="skills__img__1">
+          <div data-aos="fade-up" className="skills__img__1">
             <h4>Bootstrap</h4>
 
             <ProgressBar

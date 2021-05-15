@@ -14,7 +14,7 @@ export default function About() {
   let divRef = useRef(null);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
       if (window.scrollY > 280) {
         setHeight(window.scrollY - 280 + 466);
         console.log(height);
@@ -27,10 +27,9 @@ export default function About() {
     });
     return () => {
       window.removeEventListener("scroll", () => {
-        console.log(window.scrollY);
         if (window.scrollY > 200) {
           setHeight(window.scrollY - 200 + 485);
-          console.log(height);
+
           setAnimate(true);
         } else {
           if (animate) {
@@ -93,7 +92,9 @@ export default function About() {
           }}
         >
           {animate ? (
-            <MdMessage style={{ fontSize: "35px", color: "#ff6e6c" }} />
+            <MdMessage
+              style={{ fontSize: "35px", color: "#ff6e6c", cursor: "pointer" }}
+            />
           ) : (
             <button className="about__btn">Let's Talk</button>
           )}

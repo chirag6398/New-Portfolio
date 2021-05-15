@@ -54,14 +54,32 @@
   margin-right: 50px;
   height: 30px;
 }
+@media all and (max-width: 880px) {
+  .skills__img {
+    max-width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills__img__1 {
+    min-width: 100vw;
+  }
+  .skills__progressBar {
+    min-width: 250px;
+    max-width: 90%;
+    height: 30px;
+    margin-right: 20px;
+  }
+}
 @media all and (max-width: 500px) {
   .skills__container {
     margin-left: 0px;
     margin-top: 50px;
   }
   .skills__progressBar {
-    min-width: 160px;
+    min-width: 250px;
+    max-width: 90%;
     height: 30px;
-    margin-right: 0px;
+    margin-right: 20px;
   }
 }
