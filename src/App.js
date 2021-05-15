@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Myskills from "./components/Myskills";
+import Contact from "./components/Contact";
 import { initialState, reducer } from "./Reducer/Reducer";
 export const ContextValue = createContext();
 
@@ -23,6 +24,7 @@ function App() {
         <Nav />
         <About />
         <Myskills />
+        <Contact />
         <Footer />
         <Particle />
       </div>
