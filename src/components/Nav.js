@@ -59,7 +59,11 @@ export default function Nav() {
           {state.onDarkMode ? (
             <FiToggleRight
               onClick={darkModeHandler}
-              className="nav__icons__toggleRight"
+              className={
+                show
+                  ? "nav__icons__toggleRight"
+                  : "nav__icons__toggleRight_notShow"
+              }
             />
           ) : (
             <FiToggleLeft
@@ -76,7 +80,11 @@ export default function Nav() {
 
         {state.onDarkMode ? (
           <div>
-            <MdBrightness2 className="nav__icons__night" />
+            <MdBrightness2
+              className={
+                show ? "nav__icons__night" : " nav__icons__night_notShow"
+              }
+            />
           </div>
         ) : null}
       </div>

@@ -16,7 +16,7 @@
   box-shadow: -6px -9px 10px 4px rgb(0 0 0);
 }
 .nav__rightContent__darkMode {
-  background-color: brown;
+  background-color: #fff;
   height: 50px;
   border-radius: 5px;
 }
@@ -53,7 +53,7 @@
 .nav__icons__toggleRight {
   font-size: 20px;
   cursor: pointer;
-  color: #fff;
+  color: black;
 }
 .nav__icons__toggleLeft {
   font-size: 20px;
@@ -62,7 +62,7 @@
 .nav__icons__night {
   font-size: 20px;
   cursor: pointer;
-  color: #fff;
+  color: black;
 }
 .nav__logo > p {
   font-family: "Goblin One", cursive;
@@ -70,4 +70,13 @@
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 20px;
+}
+.nav__icons__toggleRight_notShow {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.nav__icons__night_notShow {
+  font-size: 20px;
+  color: #fff;
 }

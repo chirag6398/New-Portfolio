@@ -2,7 +2,10 @@ import React, { useContext, useEffect } from "react";
 import "../styles/skills.css";
 import Front from "../images/Front.png";
 import Res from "../images/res.png";
-import web from "../images/webAni.png";
+import Web from "../images/webAni.png";
+import ResD from "../images/resDark.png";
+import FrontD from "../images/FrontDark.png";
+import WebD from "../images/webAniDark.png";
 import line from "../images/line.png";
 import { ProgressBar } from "react-bootstrap";
 import AOS from "aos";
@@ -39,11 +42,28 @@ export default function Myskills() {
         </div>
         <div className="skills__img">
           <div data-aos="fade-up" className="skills__img__1">
-            <img
-              alt="Loading..."
-              src={Res}
-              style={{ objectFit: "contain", height: "100px", width: "100px" }}
-            />
+            {state.onDarkMode ? (
+              <img
+                alt="Loading..."
+                src={ResD}
+                style={{
+                  objectFit: "contain",
+                  height: "100px",
+                  width: "100px",
+                }}
+              />
+            ) : (
+              <img
+                alt="Loading..."
+                src={Res}
+                style={{
+                  objectFit: "contain",
+                  height: "100px",
+                  width: "100px",
+                }}
+              />
+            )}
+
             <h3>RESPONSIVE WEB DESIGN</h3>
             <p>
               Building highly responsive User Interfaces for Websites and Web
@@ -51,11 +71,28 @@ export default function Myskills() {
             </p>
           </div>
           <div data-aos="fade-up" className="skills__img__1">
-            <img
-              alt="Loading..."
-              src={Front}
-              style={{ objectFit: "contain", height: "100px", width: "100px" }}
-            />
+            {state.onDarkMode ? (
+              <img
+                alt="Loading..."
+                src={FrontD}
+                style={{
+                  objectFit: "contain",
+                  height: "100px",
+                  width: "100px",
+                }}
+              />
+            ) : (
+              <img
+                alt="Loading..."
+                src={Front}
+                style={{
+                  objectFit: "contain",
+                  height: "100px",
+                  width: "100px",
+                }}
+              />
+            )}
+
             <h3>FRONT-END DEVELOPER</h3>
             <p>
               Building highly interactive next gen User Interfaces for Websites
@@ -63,11 +100,28 @@ export default function Myskills() {
             </p>
           </div>
           <div data-aos="fade-up" className="skills__img__1">
-            <img
-              alt="Loading..."
-              src={web}
-              style={{ objectFit: "contain", height: "100px", width: "100px" }}
-            />
+            {state.onDarkMode ? (
+              <img
+                alt="Loading..."
+                src={WebD}
+                style={{
+                  objectFit: "contain",
+                  height: "100px",
+                  width: "100px",
+                }}
+              />
+            ) : (
+              <img
+                alt="Loading..."
+                src={Web}
+                style={{
+                  objectFit: "contain",
+                  height: "100px",
+                  width: "100px",
+                }}
+              />
+            )}
+
             <h3>WEB-ANIMATION</h3>
             <p>
               Laveraging the power of Javascript and CSS's Animation feature to
