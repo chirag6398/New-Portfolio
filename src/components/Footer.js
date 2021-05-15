@@ -51,6 +51,7 @@ export default function Footer() {
         {state.onDarkMode ? (
           <a
             href="https://www.instagram.com/invites/contact/?i=1m2qaw2eudl1s&utm_content=284j26e"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <FaInstagram className="footer__icon__dark footer__icon_hover" />
@@ -58,10 +59,12 @@ export default function Footer() {
         ) : (
           <a
             href="https://www.instagram.com/invites/contact/?i=1m2qaw2eudl1s&utm_content=284j26e"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <FaInstagram
               className="footer__icon footer__icon_hover"
+              rel="noopener noreferrer"
               target="_blank"
             />
           </a>
@@ -69,6 +72,7 @@ export default function Footer() {
         {state.onDarkMode ? (
           <a
             href="http://www.linkedin.com/in/chirag-agrawal-32b5a31a3"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <FaLinkedinIn className="footer__icon__dark footer__icon_hover" />
@@ -76,22 +80,33 @@ export default function Footer() {
         ) : (
           <a
             href="http://www.linkedin.com/in/chirag-agrawal-32b5a31a3"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <FaLinkedinIn
               className="footer__icon footer__icon_hover"
+              rel="noopener noreferrer"
               target="_blank"
             />
           </a>
         )}
         {state.onDarkMode ? (
-          <a href="https://github.com/chirag6398" target="_blank">
+          <a
+            href="https://github.com/chirag6398"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FaGithubSquare className="footer__icon__dark footer__icon_hover" />
           </a>
         ) : (
-          <a href="https://github.com/chirag6398" target="_blank">
+          <a
+            href="https://github.com/chirag6398"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FaGithubSquare
               className="footer__icon footer__icon_hover"
+              rel="noopener noreferrer"
               target="_blank"
             />
           </a>

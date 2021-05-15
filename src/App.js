@@ -4,6 +4,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Project from "./components/Projects";
 import Myskills from "./components/Myskills";
 import Contact from "./components/Contact";
 import { initialState, reducer } from "./Reducer/Reducer";
@@ -24,6 +25,7 @@ function App() {
         <Nav />
         <About />
         <Myskills />
+        <Project />
         <Contact />
         <Footer />
         <Particle />

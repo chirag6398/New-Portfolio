@@ -6,7 +6,7 @@ import { ContextValue } from "../App";
 export default function Nav() {
   const { state, dispatch } = useContext(ContextValue);
   const [show, setShow] = useState(false);
-  console.log(state.onDarkMode);
+  // console.log(state.onDarkMode);
   const darkModeHandler = () => {
     dispatch({ type: "CHANGE_MODE", payload: !state.onDarkMode });
   };

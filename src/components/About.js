@@ -17,7 +17,7 @@ export default function About() {
       // console.log(window.scrollY);
       if (window.scrollY > 280) {
         setHeight(window.scrollY - 280 + 466);
-        console.log(height);
+        // console.log(height);
         setAnimate(true);
       } else {
         if (animate) {
