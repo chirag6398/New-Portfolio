@@ -7,7 +7,7 @@ import mern from "../images/MernProject.JPG";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ContextValue } from "../App";
-export default function () {
+export default function Project() {
   const { state } = useContext(ContextValue);
 
   useEffect(() => {
