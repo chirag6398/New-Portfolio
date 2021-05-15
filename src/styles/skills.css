@@ -50,7 +50,7 @@
   /* align-items: center; */
 }
 .skills__progressBar {
-  min-width: 310px;
+  min-width: 250px;
   margin-right: 50px;
   height: 30px;
 }
@@ -65,8 +65,9 @@
     min-width: 100vw;
   }
   .skills__progressBar {
-    min-width: 250px;
-    max-width: 90%;
+    max-width: 80vw;
+    /* min-width: 250px; */
+    /* max-width: 90%; */
     height: 30px;
     margin-right: 20px;
   }
@@ -77,8 +78,8 @@
     margin-top: 50px;
   }
   .skills__progressBar {
-    min-width: 250px;
-    max-width: 90%;
+    /* min-width: 250px; */
+    max-width: 80vw;
     height: 30px;
     margin-right: 20px;
   }

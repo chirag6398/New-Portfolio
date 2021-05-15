@@ -1,12 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../styles/contact.css";
 import line from "../images/line.png";
 import { ContextValue } from "../App";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function Contact() {
   const { state } = useContext(ContextValue);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <div
       className={
@@ -15,7 +22,7 @@ export default function Contact() {
           : "contact__container"
       }
     >
-      <div className="contact__leftSide">
+      <div data-aos="fade-right" className="contact__leftSide">
         <div style={{ display: "flex" }}>
           <img src={line} alt="..." />
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -25,12 +32,12 @@ export default function Contact() {
         </div>
       </div>
       <div className="contact__rightSide">
-        <div className="contact__phone">
-          {state.onDarkMode ? <FaPhoneAlt /> : <FaPhoneAlt />}
+        <div data-aos="fade-left" className="contact__phone">
+          <FaPhoneAlt style={{ marginLeft: "3px" }} />
           <span>6398356528</span>
         </div>
-        <div className="contact__email">
-          {state.onDarkMode ? <MdEmail /> : <MdEmail />}
+        <div data-aos="fade-left" className="contact__email">
+          <MdEmail style={{ marginRight: "3px" }} />
           <span>agarwalchirag112@gmail.com</span>
         </div>
       </div>

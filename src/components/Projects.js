@@ -31,25 +31,25 @@ export default function () {
         <div data-aos="fade-up" className="project__imgContainer">
           <img alt="loading.." src={netflix} style={{ width: "430.41px" }} />
           <div className="project__imgOverlay">
-            <sapn>Netflix-Clone</sapn>
+            <span>Netflix-Clone</span>
           </div>
         </div>
         <div data-aos="fade-up" className="project__imgContainer">
           <img alt="loading.." src={instagram} />
           <div className="project__imgOverlay">
-            <sapn>Instagram-Clone</sapn>
+            <span>Instagram-Clone</span>
           </div>
         </div>
         <div data-aos="fade-up" className="project__imgContainer">
           <img alt="loading.." src={gitfetch} />
           <div className="project__imgOverlay">
-            <sapn>Fetch-Repo</sapn>
+            <span>Fetch-Repo</span>
           </div>
         </div>
         <div data-aos="fade-up" className="project__imgContainer">
           <img alt="loading.." src={mern} />
           <div className="project__imgOverlay">
-            <sapn>Authentication </sapn>
+            <span>Authentication </span>
           </div>
         </div>
       </div>
