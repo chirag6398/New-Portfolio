@@ -4,13 +4,17 @@ import myImg from "../images/myImg.jpg";
 import { gsap } from "gsap";
 import { ContextValue } from "../App";
 import { MdMessage } from "react-icons/md";
+import { useHistory } from "react-router-dom";
 
 export default function About() {
   const { state } = useContext(ContextValue);
   const [animate, setAnimate] = useState(false);
   const [width, setWidth] = useState(window.innerWidth - 130);
   const [height, setHeight] = useState(496);
-
+  const history = useHistory();
+  const messageHandler = () => {
+    history.push("/talk");
+  };
   let divRef = useRef(null);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -93,10 +97,18 @@ export default function About() {
         >
           {animate ? (
             <MdMessage
-              style={{ fontSize: "35px", color: "#ff6e6c", cursor: "pointer" }}
+              onClick={messageHandler}
+              style={{
+                fontSize: "35px",
+                color: "#ff6e6c",
+                cursor: "pointer",
+                zIndex: "10",
+              }}
             />
           ) : (
-            <button className="about__btn">Let's Talk</button>
+            <button onClick={messageHandler} className="about__btn">
+              Let's Talk
+            </button>
           )}
         </div>
       </div>
