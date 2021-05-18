@@ -3,21 +3,10 @@ import "../styles/message.css";
 export default function Message() {
   const [data, setData] = useState({ name: "", email: "", message: "" });
   const inputHandler = (e) => {
-    console.log(data);
     setData({ ...data, [e.target.name]: e.target.value });
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    // const res = await fetch("/api/message", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    // });
-    // const dataRes = await res.json();
-
-    // console.log(dataRes);
   };
   return (
     <div className="message__container">
@@ -178,8 +167,12 @@ export default function Message() {
             </g>
           </svg>
         </div>
+
         <div className="message__form">
           <form onSubmit={submitHandler}>
+            <h3>
+              <b>Let's Talk</b>
+            </h3>
             <fieldset>
               <label>Name</label>
               <input
