@@ -45,12 +45,14 @@ h5 {
   min-width: 250px;
   border-top: 2px solid black;
   margin-bottom: 40px;
+  margin-top: 36px;
 }
 .lastRowDarkMode {
   max-width: 600px;
   min-width: 250px;
   border-top: 2px solid #fff;
   margin-bottom: 40px;
+  margin-top: 36px;
 }
 
 @keyframes thumb {
