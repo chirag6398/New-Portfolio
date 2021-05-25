@@ -113,7 +113,7 @@ export default function Footer() {
         )}
       </div>
       <div
-        data-aos="fade-up"
+        data-aos="flip-right"
         className={
           state.onDarkMode
             ? "footer__row lastRowDarkMode "

@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../styles/about.css";
 import myImg from "../images/myImg.jpg";
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import { ContextValue } from "../App";
 import { MdMessage } from "react-icons/md";
 import { useHistory } from "react-router-dom";
@@ -9,19 +9,18 @@ import { useHistory } from "react-router-dom";
 export default function About() {
   const { state } = useContext(ContextValue);
   const [animate, setAnimate] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth - 130);
-  const [height, setHeight] = useState(496);
+  // const [width, setWidth] = useState(window.innerWidth - 130);
+  // const [height, setHeight] = useState(496);
   const history = useHistory();
   const messageHandler = () => {
     history.push("/talk");
   };
-  let divRef = useRef(null);
+  // let divRef = useRef(null);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      // console.log(window.scrollY);
       if (window.scrollY > 280) {
-        setHeight(window.scrollY - 280 + 466);
-        // console.log(height);
+        // setHeight(window.scrollY - 280 + 466);
+
         setAnimate(true);
       } else {
         if (animate) {
@@ -32,7 +31,7 @@ export default function About() {
     return () => {
       window.removeEventListener("scroll", () => {
         if (window.scrollY > 200) {
-          setHeight(window.scrollY - 200 + 485);
+          // setHeight(window.scrollY - 200 + 485);
 
           setAnimate(true);
         } else {
@@ -43,31 +42,31 @@ export default function About() {
       });
     };
   });
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWidth(window.innerWidth - 130);
-      if (window.innerWidth <= 500) {
-        setWidth(window.innerWidth - 90);
-      }
-    });
-    return () => {
-      window.removeEventListener("resize", () => {
-        setWidth(window.innerWidth);
-      });
-    };
-  });
-  useEffect(() => {
-    if (animate) {
-      gsap.to(divRef, {
-        duration: 0.5,
-        x: width,
-        y: height,
-        ease: "none",
-      });
-    } else {
-      gsap.to(divRef, { duration: 1, x: 0, y: 0 });
-    }
-  }, [animate, height, width]);
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => {
+  //     // setWidth(window.innerWidth - 130);
+  //     // if (window.innerWidth <= 500) {
+  //       // setWidth(window.innerWidth - 90);
+  //     // }
+  //   });
+  //   return () => {
+  //     window.removeEventListener("resize", () => {
+  //       setWidth(window.innerWidth);
+  //     });
+  //   };
+  // });
+  // useEffect(() => {
+  //   if (animate) {
+  //     gsap.to(divRef, {
+  //       duration: 0.2,
+  //       x: window.document.width,
+  //       y: window.innerHeight,
+  //       ease: "none",
+  //     });
+  //   } else {
+  //     gsap.to(divRef, { duration: 0.2, x: 0, y: 0 });
+  //   }
+  // }, [animate]);
 
   return (
     <div className="about__container">
@@ -91,9 +90,9 @@ export default function About() {
         </div>
         <div
           style={{ maxWidth: "max-content" }}
-          ref={(el) => {
-            divRef = el;
-          }}
+          // ref={(el) => {
+          //   divRef = el;
+          // }}
         >
           {animate ? (
             <MdMessage

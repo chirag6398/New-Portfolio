@@ -4,6 +4,7 @@ import line from "../images/line.png";
 import { ContextValue } from "../App";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import callImg from "../images/call.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 export default function Contact() {
@@ -33,14 +34,17 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="contact__rightSide">
-        <div data-aos="fade-left" className="contact__phone">
-          <FaPhoneAlt style={{ marginLeft: "3px" }} />
-          <span>6398356528</span>
-        </div>
-        <div data-aos="fade-left" className="contact__email">
-          <MdEmail style={{ marginRight: "3px" }} />
-          <span>agarwalchirag112@gmail.com</span>
+      <div className="contact__main_container">
+        <img data-aos="fade-right" src={callImg} alt="..." />
+        <div className="contact__rightSide">
+          <div data-aos="fade-left" className="contact__phone">
+            <FaPhoneAlt style={{ marginLeft: "3px" }} />
+            <span>6398356528</span>
+          </div>
+          <div data-aos="fade-left" className="contact__email">
+            <MdEmail style={{ marginRight: "3px" }} />
+            <span>agarwalchirag112@gmail.com</span>
+          </div>
         </div>
       </div>
     </div>
