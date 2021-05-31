@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useState, useEffect } from "react";
 import Particle from "./Particles/Particle";
 import "./App.css";
 import Message from "./components/Message.js";
@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Project from "./components/Projects";
 import Myskills from "./components/Myskills";
+import Loading from "./components/Loading";
 import Contact from "./components/Contact";
 import { initialState, reducer } from "./Reducer/Reducer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -14,7 +15,18 @@ export const ContextValue = createContext();
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    let reference = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => {
+      clearTimeout(reference);
+    };
+  });
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <ContextValue.Provider value={{ state, dispatch }}>
       <BrowserRouter>
