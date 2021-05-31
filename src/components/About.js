@@ -69,48 +69,78 @@ export default function About() {
   // }, [animate]);
 
   return (
-    <div className="about__container">
-      <div className="about__mainContent">
-        <div>
-          <img className="about__myImg" src={myImg} alt="..." />
-        </div>
-        <div>
-          <p className={state.onDarkMode ? "about__paraContent" : undefined}>
-            Hi there, this is
-            <span>
-              <b> Chirag</b>
-            </span>
-            . A front-end web developer using
-            <span className="about__highlights">react-js</span> library. I work
-            with my college technical society team
-            <span className="about__highlights">Conatus</span>.I am doing my
-            Btech with Computer Science. I love to learn,explore,travel and
-            expertise in the field of web Development.
-          </p>
-        </div>
-        <div
-          style={{ maxWidth: "max-content" }}
-          // ref={(el) => {
-          //   divRef = el;
-          // }}
-        >
-          {animate ? (
-            <MdMessage
-              onClick={messageHandler}
-              style={{
-                fontSize: "35px",
-                color: "#ff6e6c",
-                cursor: "pointer",
-                zIndex: "10",
-              }}
-            />
-          ) : (
-            <button onClick={messageHandler} className="about__btn">
-              Let's Talk
-            </button>
-          )}
+    <>
+      <div className="about__container">
+        <div className="about__mainContent">
+          <div>
+            <img className="about__myImg" src={myImg} alt="..." />
+          </div>
+          <div>
+            <p
+              className={
+                state.onDarkMode
+                  ? "about__paraContent about__Content"
+                  : "about__Content"
+              }
+            >
+              Hi there, this is
+              <span>
+                <b> Chirag</b>
+              </span>
+              . A front-end web developer using
+              <span className="about__highlights">react-js</span> library. I
+              work with my college technical society team
+              <span className="about__highlights"> Conatus</span>.I am doing my
+              Btech with Computer Science. I love to learn,explore,travel and
+              expertise in the field of web Development.
+            </p>
+          </div>
+          <div
+            style={{ maxWidth: "max-content" }}
+            // ref={(el) => {
+            //   divRef = el;
+            // }}
+          >
+            {animate ? (
+              <MdMessage
+                onClick={messageHandler}
+                style={{
+                  fontSize: "35px",
+                  color: "#ff6e6c",
+                  cursor: "pointer",
+                  zIndex: "10",
+                }}
+              />
+            ) : (
+              <button onClick={messageHandler} className="about__btn">
+                Let's Talk
+              </button>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+      <div
+        className={
+          state.onDarkMode ? "about__nameDark about__name" : "about__name"
+        }
+      >
+        <h2>
+          <span className="letter ltr1">C</span>
+          <span className="letter ltr2">h</span>
+          <span className="letter ltr3">i</span>
+          <span className="letter ltr4">r</span>
+          <span className="letter ltr5">a</span>
+          <span className="letter ltr6">g</span>
+
+          <span className="letter ltr7">A</span>
+          <span className="letter ltr8">g</span>
+          <span className="letter ltr9">r</span>
+          <span className="letter ltr10">a</span>
+          <span className="letter ltr11">w</span>
+          <span className="letter ltr12">a</span>
+          <span className="letter ltr13">l</span>
+        </h2>
+      </div>
+    </>
   );
 }

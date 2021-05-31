@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import "../styles/message.css";
+import { useHistory } from "react-router-dom";
+import btnAdo from "../sounds/btnClk.mp3";
 export default function Message() {
+  const history = useHistory();
   const [data, setData] = useState({ name: "", email: "", message: "" });
   const inputHandler = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
   const submitHandler = (e) => {
     e.preventDefault();
+    let audio = new Audio("btnAdo");
+    audio.play();
+    history.push("/");
   };
   return (
     <div className="message__container">
@@ -169,7 +175,7 @@ export default function Message() {
         </div>
 
         <div className="message__form">
-          <form onSubmit={submitHandler}>
+          <form>
             <h3>
               <b>Let's Talk</b>
             </h3>
@@ -203,7 +209,7 @@ export default function Message() {
                 placeholder="enter your message"
               />
             </fieldset>
-            <button>submit</button>
+            <button onClick={submitHandler}>submit</button>
           </form>
         </div>
       </div>
