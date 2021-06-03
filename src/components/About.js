@@ -1,4 +1,10 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+} from "react";
 import "../styles/about.css";
 import myImg from "../images/myImg.jpg";
 import { gsap, TweenMax, Power3, TimelineLite } from "gsap";
@@ -34,7 +40,7 @@ export default function About() {
       arrayRef.current.push(el);
     }
   };
-  useEffect(() => {
+  const nameAnimation = useCallback(() => {
     gsap.fromTo(
       techRef,
       0.5,
@@ -79,7 +85,10 @@ export default function About() {
 
       0.15
     );
-  }, []);
+  }, [tl]);
+  useEffect(() => {
+    nameAnimation();
+  }, [nameAnimation]);
   const history = useHistory();
   const messageHandler = () => {
     history.push("/talk");
@@ -106,7 +115,7 @@ export default function About() {
         }
       });
     };
-  });
+  }, [animate]);
 
   return (
     <>
